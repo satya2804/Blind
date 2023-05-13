@@ -1,1 +1,17 @@
-var 
+<!-- HTML code -->
+<form>
+  <label for="input-text">Enter text:</label>
+  <input type="text" id="input-text">
+  <button type="button" onclick="speak()">speak</button>
+</form>
+
+<script>
+  //js code
+function speak()
+{
+  const text = document.getElementById('input-text').value;
+  const msg = new SpeechSynthesisUtterance();
+  msg.text = text;
+  window.speechSynthesis.speak(msg);
+}
+</script>
